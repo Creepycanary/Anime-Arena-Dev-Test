@@ -22,7 +22,9 @@ function AbilityService:KnitInit()
 	self.Client.AbilitySignal:Connect(function(Player: Player, Ability: string)
 		local Data = CharactersData[CharacterService.PlayersCharacters[Player]]
 		print(Data)
-		print(Player.Name .. " fired ability : " .. Data[Ability])
+		--print(Player.Name .. " fired ability : " .. Data[Ability])
+		print(ServerStorage.Services.Ability.Abilities[Data.Name][Data[Ability]])
+		require(ServerStorage.Services.Ability.Abilities[Data.Name][Data[Ability]]).Activate(Player)
 	end)
 end
 
