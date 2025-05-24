@@ -4,10 +4,8 @@ return {
 		Class = "Striker",
 		M1 = "Gum-Gum Pistol",
 		M2 = "Rubber Deflect",
-		Abilities = {
-			"Gum-Gum Bazooka",
-			"Gum-Gum Axe",
-		},
+		Ability1 = "Gum-Gum Bazooka",
+		Ability2 = "Gum-Gum Axe",
 		Ultimate = "Gum-Gum Gatling",
 		Config = {
 			M1Damage = { 10.3, 12.7 },

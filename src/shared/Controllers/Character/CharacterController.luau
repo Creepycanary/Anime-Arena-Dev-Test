@@ -11,10 +11,6 @@ end
 
 function CharacterController:KnitInit()
 	print("CharacterController initialize")
-	local AbilityService = knit.GetService("AbilityService")
-	task.wait(5)
-	AbilityService.AbilitySignal:Fire("Ability1")
-	print("Fired Ability")
 end
 
 return CharacterController
