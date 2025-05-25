@@ -1,0 +1,41 @@
+{
+  "name": "Anime Arena - Dev Test",
+  "servePort": 34872,
+  "servePlaceIds": [91354467082210],
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "Shared": {
+        "$path": "src/Anime Arena - Dev Test/shared"
+      },
+      "Packages": {
+        "$path": "Packages"
+      }
+    },
+
+    "ServerScriptService": {
+      "$className": "ServerScriptService",
+      "Server": {
+        "$path": "src/Anime Arena - Dev Test/server"
+      }
+    },
+
+    "ServerStorage": {
+      "$className": "ServerStorage",
+      "$path": "src/Anime Arena - Dev Test/ServerStorage"
+    },
+
+
+     "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "Client": {
+          "$path": "src/Anime Arena - Dev Test/client"
+        }
+      }
+    }
+  }
+}

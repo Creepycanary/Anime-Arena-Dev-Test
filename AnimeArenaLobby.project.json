@@ -1,12 +1,14 @@
 {
-  "name": "Anime Arena",
+  "name": "Anime Arena - Lobby",
+  "servePort": 27843,
+  "servePlaceIds": [124983942211510],
   "tree": {
     "$className": "DataModel",
 
     "ReplicatedStorage": {
       "$className": "ReplicatedStorage",
       "Shared": {
-        "$path": "src/shared"
+        "$path": "src/Anime Arena - Lobby/shared"
       },
       "Packages": {
         "$path": "Packages"
@@ -16,13 +18,13 @@
     "ServerScriptService": {
       "$className": "ServerScriptService",
       "Server": {
-        "$path": "src/server"
+        "$path": "src/Anime Arena - Lobby/server"
       }
     },
 
     "ServerStorage": {
       "$className": "ServerStorage",
-      "$path": "src/ServerStorage"
+      "$path": "src/Anime Arena - Lobby/ServerStorage"
     },
 
 
@@ -31,7 +33,7 @@
       "StarterPlayerScripts": {
         "$className": "StarterPlayerScripts",
         "Client": {
-          "$path": "src/client"
+          "$path": "src/Anime Arena - Lobby/client"
         }
       }
     }
