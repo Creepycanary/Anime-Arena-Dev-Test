@@ -1,10 +1,18 @@
--- ModuleScript named "Gum-Gum Pistol" under ServerStorage.Services.Ability.Abilities.Ruffy
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local knit = require(ReplicatedStorage.Packages.knit)
+local GumGumPistol = {}
 
-local module = {}
+local Config = {}
+Config.Cooldown = 0.75
 
-function module.Activate(player)
-	print(player.Name .. " used Gum-Gum Pistol!")
-	-- Add your ability logic here
+function GumGumPistol.Activate(player)
+	local CooldownService = knit.GetService("CooldownService")
+	-- Placeholder logic
+	print(player.Name .. " used " .. script.Name)
+
+	-- Insert ability logic here later
+
+	CooldownService:StartCooldown(player, script.Name, Config.Cooldown)
 end
 
-return module
+return GumGumPistol

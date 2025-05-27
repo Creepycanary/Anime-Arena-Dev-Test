@@ -19,8 +19,13 @@ function AbilityService:KnitInit()
 	print("AbilityService initialize")
 	local CharacterService = knit.GetService("CharacterService")
 
+	local CooldownService = knit.GetService("CooldownService")
+
 	self.Client.AbilitySignal:Connect(function(Player: Player, Ability: string)
 		local Data = CharactersData[CharacterService.PlayersCharacters[Player]]
+		if CooldownService:IsOnCooldown(Player, Data.Name) then
+			return
+		end
 		--print(Data)
 		--print(Player.Name .. " fired ability : " .. Data[Ability])
 		--print(ServerStorage.Services.Ability.Abilities[Data.Name][Data[Ability]])
