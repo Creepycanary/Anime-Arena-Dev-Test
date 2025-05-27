@@ -33,6 +33,7 @@ end
 
 function CooldownService:IsOnCooldown(player: Player, id: string): boolean
 	local endTime = playersCooldowns[player] and playersCooldowns[player][id]
+	--print(playersCooldowns)
 	return endTime and os.clock() < endTime
 end
 

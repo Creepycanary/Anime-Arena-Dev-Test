@@ -21,15 +21,14 @@ function AbilityService:KnitInit()
 
 	local CooldownService = knit.GetService("CooldownService")
 
-	self.Client.AbilitySignal:Connect(function(Player: Player, Ability: string)
+	self.Client.AbilitySignal:Connect(function(Player: Player, Ability: string, Held: boolean)
 		local Data = CharactersData[CharacterService.PlayersCharacters[Player]]
-		if CooldownService:IsOnCooldown(Player, Data.Name) then
+
+		if CooldownService:IsOnCooldown(Player, Data[Ability]) then
 			return
 		end
-		--print(Data)
-		--print(Player.Name .. " fired ability : " .. Data[Ability])
-		--print(ServerStorage.Services.Ability.Abilities[Data.Name][Data[Ability]])
-		require(ServerStorage.Services.Ability.Abilities[Data.Name][Data[Ability]]).Activate(Player)
+
+		require(ServerStorage.Services.Ability.Abilities[Data.Name][Data[Ability]]).Activate(Player, Held)
 	end)
 end
 
